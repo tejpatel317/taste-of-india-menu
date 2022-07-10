@@ -97,3 +97,16 @@ html,body { height:100%; }
   width: 70%;
   background-color: lightyellow;
 }
+
+.prices {
+  position:relative;
+  top:50%;
+  left:75%;
+}
+
+.checkoutbutton {
+  position:relative;
+  top:50%;
+  left:50%;
+  margin-left:-40px;
+}

@@ -32,9 +32,9 @@ function ShoppingCart({cartItems, numberOfItems, removeFromCart}) {
                     </div>
                     {shoppingCartComponents}
                     <div>
-                        <h5 className="total">Subtotal: ${price}</h5>
-                        <h5 className="total">Tax(8%): ${tax}</h5>
-                        <h3 className="total">Total: ${total}</h3>
+                        <h5 className="prices">Subtotal: ${price}</h5>
+                        <h5 className="prices">Tax(8%): ${tax}</h5>
+                        <h3 className="prices">Total: ${total}</h3>
                         <button type="button" className="btn btn-success btn-lg checkoutbutton mb-4">Checkout
                         </button>
                     </div>

@@ -12,7 +12,7 @@ function App() {
   return (
     <>
     <Navbar/>
-    <Container>
+    <Container fluid className="removepadding">
       <Switch>
         <Route exact path="/">
           <Home />

@@ -9,14 +9,19 @@ function Navbar() {
     const shoppingCartIcon = "https://cdn-icons-png.flaticon.com/512/4379/4379575.png"
 
     return (
-        <NavbarStyle>
+        <NavbarStyle className="navcolor">
             <Container>
-                <Image/>
-                <Nav>
-                    <Nav.Link as={NavLink} exact to="/">Home</Nav.Link>
-                    <Nav.Link as={NavLink} exact to="/menu">Menu</Nav.Link>
-                    <Nav.Link as={NavLink} exact to="/reviews">Reviews</Nav.Link>
-                    <Nav.Link as={NavLink} exact to="/shoppingcart">PlaceHolder</Nav.Link>
+                <Image src={tasteOfIndiaLogo} alt="Taste Of India Logo" className="img-responsive justify-content-start" style={{height: "80px"}}/>
+                <Nav className="justify-content-center">
+                    <Nav.Link as={NavLink} exact to="/" className="fs-3 fw-normal mx-3 text-light my-auto">Home</Nav.Link>
+                    <Nav.Link as={NavLink} exact to="/menu" className="fs-3 fw-normal mx-3 text-light my-auto">Menu</Nav.Link>
+                    <Nav.Link as={NavLink} exact to="/reviews" className="fs-3 fw-normal mx-3 text-light my-auto">Reviews</Nav.Link>
+                    <Nav.Link as={NavLink} exact to="/shoppingcart">
+                        <button className="shoppingcartbutton">
+                            <Image src={shoppingCartIcon} alt="Shopping Cart Icon" style={{height: "50px", position: "relative"}}/>
+                            <div className="shoppingitemcount">5</div>
+                        </button>
+                    </Nav.Link>
                 </Nav>
             </Container>
         </NavbarStyle>

@@ -3,7 +3,7 @@ import {Container} from 'react-bootstrap';
 
 function Home() {
     return (
-        <Container>
+        <Container fluid className="removepadding">
             <h1>Hello</h1>
         </Container>
     )

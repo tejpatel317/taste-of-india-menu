@@ -16,7 +16,6 @@ function App() {
   
   function addToCart(id) {
     const selectedItem = cartItems.find((item) => item.id === id)
-
     if (selectedItem) {
       const newCartItems = cartItems.map((item) => {
         if (item.id === id) {
@@ -27,7 +26,8 @@ function App() {
         }
       })
       setCartItems(newCartItems)
-    } else {
+    } 
+    else {
       const newCartItem = menuData.find((item) => item.id === id)
       newCartItem.quantity = 1
       const newCartItems = [...cartItems, newCartItem]

@@ -14,6 +14,26 @@ function App() {
   const [cartItems, setCartItems] = useState([])
   const numberOfItems = cartItems.reduce((total, item) => (total + item.quantity),0) 
   
+  function addToCart(id) {
+    const selectedItem = cartItems.find((item) => item.id === id)
+
+    if (selectedItem) {
+      const newCartItems = cartItems.map((item) => {
+        if (item.id === id) {
+          return {...item, quantity: item.quantity+1}
+        }
+        else {
+          return item
+        }
+      })
+      setCartItems(newCartItems)
+    } else {
+      const newCartItem = menuData.find((item) => item.id === id)
+      newCartItem.quantity = 1
+      const newCartItems = [...cartItems, newCartItem]
+      setCartItems(newCartItems)
+    }
+  }
 
   return (
     <>
@@ -24,7 +44,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/menu">
-          <Menu menuData={menuData}/>
+          <Menu menuData={menuData} cartItems={cartItems} addToCart={addToCart}/>
         </Route>
         <Route exact path="/reviews">
           <Reviews/>

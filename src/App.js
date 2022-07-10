@@ -10,6 +10,11 @@ import ShoppingCart from "./ShoppingCart";
 import menuData from "./Menudata";
 
 function App() {
+
+  const [cartItems, setCartItems] = useState([])
+  const numberOfItems = cartItems.reduce((total, item) => (total + item.quantity),0) 
+  
+
   return (
     <>
     <Navbar/>

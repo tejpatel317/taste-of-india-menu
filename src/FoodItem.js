@@ -1,13 +1,20 @@
 import {React} from "react";
 import { Card, Row, Col} from "react-bootstrap";
 
-function FoodItem({menuItem, addToCart, cartItems}) {
+function FoodItem({menuItem, addToCart, removeFromCart, cartItems}) {
+    
     const {id, item, url, price} = menuItem
+
     const selectedItem = cartItems.find((item) => item.id === id)
 
     function handleAddClick() {
         addToCart(id)
     }
+
+    function handleRemoveClick() {
+        removeFromCart(id)
+    }
+
 
     return (
         <Card>
@@ -27,8 +34,8 @@ function FoodItem({menuItem, addToCart, cartItems}) {
                         <button className="btn btn-outline-success" onClick={handleAddClick}>
                             Add
                         </button>
-                        {selectedItem > 0 ? 
-                            <button className="btn btn-outline-danger mx-2">
+                        {selectedItem ? 
+                            <button className="btn btn-outline-danger mx-2" onClick={handleRemoveClick}> 
                             Remove
                             </button> :
                             null

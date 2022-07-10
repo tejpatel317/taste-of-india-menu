@@ -35,6 +35,26 @@ function App() {
     }
   }
 
+  function removeFromCart(id) {
+    const selectedItem = cartItems.find((item) => item.id === id)
+
+    if (selectedItem.quantity > 1) {
+      const newCartItems = cartItems.map((item) => {
+        if (item.id === id) {
+          return {...item, quantity: item.quantity-1}
+        }
+        else {
+          return item
+        }
+      })
+      setCartItems(newCartItems)
+    } 
+    else {
+      const newCartItems = cartItems.filter((item) => item.id !== id)
+      setCartItems(newCartItems)
+    }
+  }
+
   return (
     <>
     <Navbar/>
@@ -44,7 +64,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/menu">
-          <Menu menuData={menuData} cartItems={cartItems} addToCart={addToCart}/>
+          <Menu menuData={menuData} cartItems={cartItems} addToCart={addToCart} removeFromCart={removeFromCart}/>
         </Route>
         <Route exact path="/reviews">
           <Reviews/>

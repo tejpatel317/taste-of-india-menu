@@ -2,10 +2,10 @@ import React from "react";
 import MenuCards from "./MenuCards"
 import Footer from "./Footer";
 
-function Menu({menuData, addToCart, cartItems}) {
+function Menu({menuData, addToCart, removeFromCart, cartItems}) {
     return (
         <>  
-            <MenuCards menuData={menuData} addToCart={addToCart} cartItems={cartItems}></MenuCards>
+            <MenuCards menuData={menuData} addToCart={addToCart} removeFromCart={removeFromCart} cartItems={cartItems}></MenuCards>
             <Footer></Footer>
         </>
     )

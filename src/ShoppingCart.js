@@ -22,6 +22,10 @@ function ShoppingCart({cartItems, numberOfItems, removeFromCart}) {
     let tax = parseFloat((price*0.08).toFixed(2))
     let total = parseFloat((price+tax).toFixed(2))
 
+    function checkedOut() {
+        alert("Your order has been placed. Thank you!")
+    }
+
     return (
         <>
             <Container className="shoppingcartcontainer1 d-flex align-items-center justify-content-center mt-3 ">
@@ -35,7 +39,7 @@ function ShoppingCart({cartItems, numberOfItems, removeFromCart}) {
                         <h5 className="prices">Subtotal: ${price}</h5>
                         <h5 className="prices">Tax(8%): ${tax}</h5>
                         <h3 className="prices">Total: ${total}</h3>
-                        <button type="button" className="btn btn-success btn-lg checkoutbutton mb-4">Checkout
+                        <button type="button" className="btn btn-success btn-lg checkoutbutton mb-4" onClick={checkedOut}>Checkout
                         </button>
                     </div>
                 </div>

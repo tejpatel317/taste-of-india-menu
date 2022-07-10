@@ -1,10 +1,5 @@
 html,body { height:100%; }
 
-.removepadding {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .navcolor {
   background-color: rgb(143, 43, 43);
 }
@@ -38,4 +33,47 @@ html,body { height:100%; }
   text-align: center;
   font-weight: 600;
   font-size: 20px;
+}
+
+.displaypagebackground {
+  background-image: url("https://www.outlookindia.com/outlooktraveller/public/uploads/articles/explore/feature-platter.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 850px;
+}
+
+.displaypagecontent {
+  opacity: 0.92;
+  width: 530px;
+  height: 250px;
+  background: #FFF;
+}
+
+.aboutushalf1 {
+  padding-top: 3rem;
+  color: orange;
+}
+
+.aboutushalf1 h1{
+  text-align: center;
+  font-size: 35px;
+  letter-spacing: 4px;
+  padding-top: 40px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.aboutushalf1 p{
+  color: black;
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding-top: 20px;
+  text-align: left;
+  padding-right: 80px;
+  padding-left: 100px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.aboutushalf2 {
+  padding-top: 3rem;
 }

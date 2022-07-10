@@ -12,7 +12,7 @@ function App() {
   return (
     <>
     <Navbar/>
-    <Container fluid className="removepadding">
+    <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
       <Switch>
         <Route exact path="/">
           <Home />

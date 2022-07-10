@@ -16,9 +16,9 @@ function Navbar() {
                     <Nav.Link as={NavLink} exact to="/" className="fs-3 fw-normal mx-3 text-light my-auto">Home</Nav.Link>
                     <Nav.Link as={NavLink} exact to="/menu" className="fs-3 fw-normal mx-3 text-light my-auto">Menu</Nav.Link>
                     <Nav.Link as={NavLink} exact to="/reviews" className="fs-3 fw-normal mx-3 text-light my-auto">Reviews</Nav.Link>
-                    <Nav.Link as={NavLink} exact to="/shoppingcart">
+                    <Nav.Link as={NavLink} exact to="/shoppingcart" className="fs-3 fw-normal mx-3 text-light">
                         <button className="shoppingcartbutton">
-                            <Image src={shoppingCartIcon} alt="Shopping Cart Icon" style={{height: "50px", position: "relative"}}/>
+                            <Image src={shoppingCartIcon} alt="Shopping Cart Icon" style={{height: "50px", position: "relative"}} className="fluid"/>
                             <div className="shoppingitemcount">5</div>
                         </button>
                     </Nav.Link>

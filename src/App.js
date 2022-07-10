@@ -70,7 +70,7 @@ function App() {
           <Reviews/>
         </Route>
         <Route exact path="/shoppingcart">
-          <ShoppingCart/>
+          <ShoppingCart cartItems={cartItems} numberOfItems={numberOfItems} removeFromCart={removeFromCart}/>
         </Route>
       </Switch>
     </Container>

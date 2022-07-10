@@ -17,11 +17,31 @@ function ShoppingCart({cartItems, numberOfItems, removeFromCart}) {
             </div>
         )
     })
+    
+    let price = parseFloat(cartItems.reduce((total, item) => (total + item.price*item.quantity),0).toFixed(2))
+    let tax = parseFloat((price*0.08).toFixed(2))
+    let total = parseFloat((price+tax).toFixed(2))
 
     return (
-        <Container>
-            <h1>Hello from ShoppingCart</h1>
-        </Container>
+        <>
+            <Container className="shoppingcartcontainer1 d-flex align-items-center justify-content-center mt-3 ">
+                <div className="shoppingcartcontainer2 mt-5 border border-dark border-5">
+                    <h2 className="mb-0 mx-3 my-2">Shopping Cart</h2>
+                    <div className="d-flex justify-content-between">
+                        <p className="mx-3 my-2">You have {numberOfItems} items in your cart</p>
+                    </div>
+                    {shoppingCartComponents}
+                    <div>
+                        <h5 className="total">Subtotal: ${price}</h5>
+                        <h5 className="total">Tax(8%): ${tax}</h5>
+                        <h3 className="total">Total: ${total}</h3>
+                        <button type="button" className="btn btn-success btn-lg checkoutbutton mb-4">Checkout
+                        </button>
+                    </div>
+                </div>
+            </Container>
+            <Footer className="shpcartfoot"></Footer>
+        </>
     )
 }
 

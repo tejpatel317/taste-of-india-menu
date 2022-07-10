@@ -1,11 +1,13 @@
 import React from "react";
-import {Container} from 'react-bootstrap'
+import MenuCards from "./MenuCards"
+import Footer from "./Footer";
 
-function Menu() {
+function Menu({menuData}) {
     return (
-        <Container>
-            <h1>Hello from Menu</h1>
-        </Container>
+        <>  
+            <MenuCards menuData={menuData}></MenuCards>
+            <Footer></Footer>
+        </>
     )
 }
 

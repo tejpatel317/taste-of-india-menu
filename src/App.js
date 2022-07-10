@@ -6,7 +6,8 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import Menu from "./Menu";
 import Reviews from "./Reviews";
-import ShoppingCart from "./ShoppingCart"
+import ShoppingCart from "./ShoppingCart";
+import menuData from "./Menudata";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/menu">
-          <Menu/>
+          <Menu menuData={menuData}/>
         </Route>
         <Route exact path="/reviews">
           <Reviews/>

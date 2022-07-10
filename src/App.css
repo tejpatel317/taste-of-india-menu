@@ -77,3 +77,13 @@ html,body { height:100%; }
 .aboutushalf2 {
   padding-top: 3rem;
 }
+
+.footercontainter {
+  background-color: darkorange;
+}
+
+.socials {
+  width: auto;
+  height: 50px;
+  margin: 0px 10px 10px 0px;
+}

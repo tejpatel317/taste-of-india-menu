@@ -10,6 +10,7 @@ import ShoppingCart from "./ShoppingCart";
 import menuData from "./Menudata";
 
 function App() {
+  const [reviews, setReviews] = useState([])
   const [cartItems, setCartItems] = useState([])
   const numberOfItems = cartItems.reduce((total, item) => (total + item.quantity),0) 
 
@@ -73,7 +74,7 @@ function App() {
           <Menu menuData={menuData} cartItems={cartItems} addToCart={addToCart} removeFromCart={removeFromCart}/>
         </Route>
         <Route exact path="/reviews">
-          <Reviews/>
+          <Reviews reviews={reviews} setReviews={setReviews}/>
         </Route>
         <Route exact path="/shoppingcart">
           <ShoppingCart cartItems={cartItems} numberOfItems={numberOfItems} removeFromCart={removeFromCart}/>

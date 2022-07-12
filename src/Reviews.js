@@ -8,11 +8,35 @@ function Reviews({reviews, setReviews}) {
     const [lastName, setLastName] = useState("")
     const [rating, setRating] = useState("5")
     const [comment, setComment] = useState("")
+    
+    function handleFormSubmit(e) {
+        e.preventDefault()
+    
+        const formObjectForPost = {
+          name : `${firstName} ${lastName}`,
+          rating : rating,
+          comment : comment,
+        }
+    
+        fetch("http://localhost:3000/reviews", {
+          method: "POST",
+          headers: {
+            "Content-Type" : "application/json",
+          },
+          body: JSON.stringify(formObjectForPost)
+        })
+        .then((r) => r.json())
+        .then((newReview) => setReviews([...reviews, newReview]))
+      }
+
 
     return (
         <>
             <Container fluid className="hm-auto bg-light">
                 <h1 className="text-center my-3 fontstyle">Customer Reviews</h1>
+                    <Row>
+                        {compReviews}
+                    </Row>
                 <h4 className="text-center w-50 mx-auto my-4 fontstyle">If you enjoyed your food and time at the restaurant or have feedback on how we can improve, we encourage you to submit a rating by filling out the form below.</h4>
                 <div className="pb-5">
                     <form className="form-control w-50 mx-auto" onSubmit={handleFormSubmit}> 

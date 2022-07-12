@@ -8,7 +8,9 @@ function Reviews({reviews, setReviews}) {
     const [lastName, setLastName] = useState("")
     const [rating, setRating] = useState("5")
     const [comment, setComment] = useState("")
-    
+
+    const starItem = "https://cdn-icons-png.flaticon.com/512/2107/2107957.png"
+
     function handleFormSubmit(e) {
         e.preventDefault()
     
@@ -28,6 +30,7 @@ function Reviews({reviews, setReviews}) {
         .then((r) => r.json())
         .then((newReview) => setReviews([...reviews, newReview]))
     }
+
 
     function starImages(rating) {
         const starArray = Array(parseInt(rating)).fill("")

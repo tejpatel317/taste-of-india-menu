@@ -27,8 +27,33 @@ function Reviews({reviews, setReviews}) {
         })
         .then((r) => r.json())
         .then((newReview) => setReviews([...reviews, newReview]))
-      }
+    }
 
+    function starImages(rating) {
+        const starArray = Array(parseInt(rating)).fill("")
+
+        const newStarArray = starArray.map((element, index) => {
+            return(
+                <img key={index} className="float-end" src={starItem} style={{height: "25px"}}/>
+            )
+        })
+
+        return newStarArray
+    }
+
+    const compReviews = reviews.map((review) => {
+        return (
+        <Col key={review.id} className="col-md-4 p-3">
+            <Card>
+                <Card.Header>
+                    <h4 className="float-start my-auto">{review.name}</h4>
+                    {starImages(review.rating)}
+                    <h5 className="float-end mx-2 my-auto">{review.rating}/5</h5>
+                </Card.Header>
+                <Card.Body className="bg-light m-0 border reviewtext">{review.comment}</Card.Body>
+            </Card>                    
+        </Col>)
+    })
 
     return (
         <>

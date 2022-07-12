@@ -10,9 +10,15 @@ import ShoppingCart from "./ShoppingCart";
 import menuData from "./Menudata";
 
 function App() {
-
   const [cartItems, setCartItems] = useState([])
   const numberOfItems = cartItems.reduce((total, item) => (total + item.quantity),0) 
+
+  useEffect(() => {
+    fetch("http://localhost:3000/reviews")
+    .then((r) => r.json())
+    .then((allReviews) => {
+        setReviews(allReviews)})
+  },[])
   
   function addToCart(id) {
     const selectedItem = cartItems.find((item) => item.id === id)

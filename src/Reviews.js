@@ -3,6 +3,12 @@ import Footer from "./Footer";
 import {Container, Row, Col, Card} from 'react-bootstrap';
 
 function Reviews() {
+
+    const [firstName, setFirstName] = useState("")
+    const [lastName, setLastName] = useState("")
+    const [rating, setRating] = useState("5")
+    const [comment, setComment] = useState("")
+
     return (
         <>
             <Container fluid className="hm-auto bg-light">

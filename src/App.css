@@ -110,3 +110,14 @@ html,body { height:100%; }
   left:50%;
   margin-left:-40px;
 }
+
+.fontstyle {
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  letter-spacing: 3px;
+}
+
+.reviewtext {
+  font-style: italic;
+  font-weight: 450;
+}

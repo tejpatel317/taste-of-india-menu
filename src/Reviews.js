@@ -2,7 +2,7 @@ import {React, useState} from "react";
 import Footer from "./Footer";
 import {Container, Row, Col, Card} from 'react-bootstrap';
 
-function Reviews() {
+function Reviews({reviews, setReviews}) {
 
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")

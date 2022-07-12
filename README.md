@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# Taste Of India Menu
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Taste of India online menu! 
+
+## Description
+
+Taste of India is a local New Jersey restaurant which offers traditional Indian dishes with a modernized approach. We use fresh ingredients and classic spices to constantly innovate and redefine traditional Indian dishes by exploring progressive ideas. We strive to provide our customers with the authentic taste of India and invite you to try our dishes.
+
+## Usage
+
+This interative menu has three main navigation panels which include the menu section, shopping cart section, and reviews section. In the menu section, the user is presented with images of menu items and has the ability to add or remove these items from the cart. The shopping cart section shows a summary of the items that are present in the cart, and allows the user to checkout. The reviews section presents the user with all avaliable customer reviews and allows the user to submit a review based on their experience at the resturant. 
 
 ## Available Scripts
 

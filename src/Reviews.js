@@ -37,7 +37,7 @@ function Reviews({reviews, setReviews}) {
 
         const newStarArray = starArray.map((element, index) => {
             return(
-                <img key={index} className="float-end" src={starItem} style={{height: "25px"}}/>
+                <img key={index} className="float-end" src={starItem} alt="Star" style={{height: "25px"}}/>
             )
         })
 
